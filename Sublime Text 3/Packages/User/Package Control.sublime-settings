@@ -1,0 +1,18 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"Clipboard Manager",
+		"Emmet",
+		"GitGutter",
+		"Highlight",
+		"More Layouts",
+		"Package Control",
+		"Solarized Color Scheme",
+		"Theme - Primer"
+	]
+}
