@@ -10,8 +10,6 @@ delete() {
 }
 
 alias pbc='xargs echo -n | pbcopy'
-alias rtest='bundle exec ruby -I "lib:test"'
-alias rake='bundle exec rake'
 alias gl='git log --pretty=format:"%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s" --date=short -n 20'
 alias lsl='ls -halFG'
 alias be='bundle exec'
