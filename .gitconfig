@@ -8,7 +8,7 @@
 	name = Your Name
 	email = user@example.com
 [core]
-	editor = subl -n -w
+	editor = vim
   fileMode = false
 [push]
 	default = simple
