@@ -69,7 +69,7 @@ nnoremap k gk
 
 nnoremap <leader>s :mksession<CR>       " save session
 
-colorscheme molokai
+colorscheme sol
 set paste
 filetype plugin indent on
 "autocmd Filetype gitcommit spell textwidth=72
