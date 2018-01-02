@@ -26,5 +26,5 @@ This repo contains my dotfiles.
 
 Run the unintall command with `. ~/.dotfiles/uninstall.sh`. Ensure it has execute permissions.
 
-*Note* This will potentially leave some debris. I purposely did not delete `~/.bash` and `~/vim` as there could be other files in there. Execute `rm rf ~/.bashrc; rm -rf ~/.vim` to remove them and their contents.
+*Note* This will potentially leave some debris. I purposely did not delete `~/.bash` and `~/vim` as there could be other files in there. Execute `rm rf ~/.bash; rm -rf ~/.vim` to remove them and their contents.
 
