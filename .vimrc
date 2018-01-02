@@ -13,7 +13,7 @@ Plugin 'flazz/vim-colorschemes'
 " Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-rails'
+" Plugin 'tpope/vim-rails'
 Plugin 'mattn/emmet-vim'
 
 " The following are examples of different formats supported.
