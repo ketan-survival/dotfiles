@@ -24,6 +24,12 @@ if [ -e $GITCONFIG ]; then
 fi
 ln -s ~/.dotfiles/.gitconfig $GITCONFIG
 
+GITIGNORE_GLOBAL=~/.gitignore_global
+if [ -e $GITIGNORE_GLOBAL ]; then
+  mv $GITIGNORE_GLOBAL "$GITIGNORE_GLOBAL.bak"
+fi
+ln -s ~/.dotfiles/.gitconfig $GITIGNORE_GLOBAL
+
 git clone https://github.com/jimeh/git-aware-prompt.git ~/.bash/git-aware-prompt
 
 # setup vim with plugins

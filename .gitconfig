@@ -8,6 +8,7 @@
 	name = Your Name
 	email = user@example.com
 [core]
+	excludesfile = ~/.gitignore_global
 	editor = vim
   fileMode = false
 [push]

@@ -23,6 +23,12 @@ if [ -e $GITCONFIGBAK ]; then
   mv $GITCONFIGBAK ~/.gitconfig
 fi
 
+rm ~/.gitconfig
+GITIGNORE_GLOBALBAK=~/.gitignore_global.bak
+if [ -e $GITIGNORE_GLOBALBAK ]; then
+  mv $GITIGNORE_GLOBALBAK ~/.gitignore_global
+fi
+
 rm -rf ~/.bash/git-aware-prompt
 
 # Reset vim
