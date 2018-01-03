@@ -2,7 +2,7 @@
 	co = checkout
 	ci = commit
 	st = status
-	logline = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	ll = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [user]
 # Add your username and email here
 	name = Your Name
@@ -13,3 +13,5 @@
   fileMode = false
 [push]
 	default = simple
+[color]
+	ui = auto
