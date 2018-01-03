@@ -10,11 +10,13 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
-" Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
-" Plugin 'tpope/vim-rails'
 Plugin 'mattn/emmet-vim'
+Plugin 'rainerborene/vim-reek' "Finds ruby code smells
+Plugin 'w0rp/ale' "Linter
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -55,13 +57,13 @@ set expandtab                           " tabs are spaces
 set shiftwidth=2
 set autoindent
 set smartindent
-"set number                              " show line numbers
 set showcmd                             " show command in bottom bar
-set cursorline                          " highlight current line
 set wildmenu                            " visual autocomplete for command menu
 set ruler                               " Show line,column in status bar eg. 28,45
 set incsearch                           " search as characters are entered
 " set hlsearch                            " highlight matches
+set viminfo='20,<1000                   " Copy up to 1000 lines
+
 
 " move vertically by visual line
 nnoremap j gj
@@ -70,7 +72,8 @@ nnoremap k gk
 nnoremap <leader>s :mksession<CR>       " save session
 
 colorscheme sol
-set paste
 filetype plugin indent on
 "autocmd Filetype gitcommit spell textwidth=72
-" autocmd vimenter * NERDTree           " Autostart nerd tree
+let g:airline#extensions#ale#enabled = 1
+let g:airline_theme='solarized'
+
