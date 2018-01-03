@@ -1,18 +1,5 @@
 #!/usr/bin/env bash
 
-# ##################################################
-# This script sets up my development environment
-#
-version="0.0.1"
-#
-#
-# HISTORY:
-#
-# * 2017-12-28 - v0.0.1  - Initial release
-#
-# ##################################################
-
-
 # install rvm and the latest ruby
 gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 curl -sSL https://get.rvm.io | bash -s stable --ruby
