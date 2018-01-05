@@ -1,44 +1,29 @@
 #!/usr/bin/env bash
 
+function unlink_file() {
+  FILE=~/$1
+  BACKUP=$FILE.bak
+  rm $FILE
+  if [ -e $BACKUP ]; then
+    mv $BACKUP $FILE
+  fi
+}
+
 # Remove rvm
 rvm implode
 
 # Reset git 
-rm ~/.gitconfig
-GITCONFIGBAK=~/.gitconfig.bak
-if [ -e $GITCONFIGBAK ]; then
-  mv $GITCONFIGBAK ~/.gitconfig
-fi
-
-rm ~/.gitconfig
-GITIGNORE_GLOBALBAK=~/.gitignore_global.bak
-if [ -e $GITIGNORE_GLOBALBAK ]; then
-  mv $GITIGNORE_GLOBALBAK ~/.gitignore_global
-fi
+unlink_file .gitconfig
+unlink_file .gitignore_global
 
 rm -rf ~/.bash/git-aware-prompt
 
 # Reset vim
 rm -rf ~/.vim/bundle
+unlink_file .vimrc
 
-rm ~/.vimrc
-VIMRCBAK=~/.vimrc.bak
-if [ -e $VIMRCBAK ]; then
-  mv $VIMRCBAK ~/.vimrc
-fi
-
-# Remove symlinks .inputrc and .bashrc
-rm ~/.inputrc
-INPUTRCBAK=~/.inputrc.bak
-if [ -e $INPUTRCBAK ]; then
-  mv $INPUTRCBAK ~/.inputrc
-fi
-
-rm ~/.bashrc
-BASHRCBAK=~/.bashrc.bak
-if [ -e $BASHRCBAK ]; then
-  mv $BASHRCBAK ~/.bashrc
-fi
+unlink_file .inputrc
+unlink_file .bashrc
 
 source ~/.bashrc
 
