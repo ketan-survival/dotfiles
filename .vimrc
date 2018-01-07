@@ -75,5 +75,5 @@ colorscheme sol
 filetype plugin indent on
 "autocmd Filetype gitcommit spell textwidth=72
 let g:airline#extensions#ale#enabled = 1
-let g:airline_theme='solarized'
+let g:airline_theme='sol'
 
