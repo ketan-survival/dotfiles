@@ -63,7 +63,7 @@ set ruler                               " Show line,column in status bar eg. 28,
 set incsearch                           " search as characters are entered
 " set hlsearch                            " highlight matches
 set viminfo='20,<1000                   " Copy up to 1000 lines
-
+set so=3                                " minumum lines above/below cursor
 
 " move vertically by visual line
 nnoremap j gj
