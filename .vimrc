@@ -15,6 +15,13 @@ Plugin 'rainerborene/vim-reek' "Finds ruby code smells
 Plugin 'w0rp/ale' "Linter
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-scripts/tComment' "<CTRL>+__ to comment/uncomment line or block
+
+" Plugins for web dev (ruby stack)
+Plugin 'tpope/vim-rails'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-endwise' " Adds 'end' to keywords like if,class,def etc.
+Plugin 'slim-template/vim-slim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -38,12 +45,20 @@ set colorcolumn=81                      " set color colum at 80 characters
 au VimEnter *.* highlight ColorColumn ctermbg=254 " set column color to gray
 
 :let mapleader = " "                    " Set leader key to spacebar
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
 
 nnoremap <leader>s :mksession<CR>       " save session
+
+" display tabs and trailing whitespace
+set list listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:˽
 
 colorscheme sol
 filetype plugin indent on
