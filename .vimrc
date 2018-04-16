@@ -34,6 +34,11 @@ set incsearch                           " search as characters are entered
 set viminfo='20,<1000                   " Copy up to 1000 lines
 set so=3                                " minumum lines above/below cursor
 
+set colorcolumn=81                      " set color colum at 80 characters
+au VimEnter *.* highlight ColorColumn ctermbg=254 " set column color to gray
+
+:let mapleader = " "                    " Set leader key to spacebar
+
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
