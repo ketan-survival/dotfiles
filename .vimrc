@@ -17,6 +17,12 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/tComment' "<CTRL>+__ to comment/uncomment line or block
 
+" Snippets
+Plugin 'MarcWeber/vim-addon-mw-utils' " required by snipmate
+Plugin 'tomtom/tlib_vim'              " required by snipmate
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'           " snippet collection
+
 " Plugins for web dev (ruby stack)
 Plugin 'tpope/vim-rails'
 Plugin 'thoughtbot/vim-rspec'
